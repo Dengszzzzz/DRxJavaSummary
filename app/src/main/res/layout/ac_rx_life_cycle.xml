@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <TextView
+        style="@style/myTextView"
+        android:text="模拟网络请求，进行rxLifeCycle绑定"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        style="@style/myTextView"
+        android:text="1.bindUntilEvent(@NonNull ActivityEvent event)使用"
+        android:layout_margin="15dp"/>
+
+    <Button
+        android:id="@+id/btn1"
+        style="@style/myButton"
+        android:text="发起请求,指定某个生命周期取消订阅"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_desc1"
+        style="@style/myTextView"
+        android:text="回调结果："
+        android:layout_margin="15dp"/>
+
+    <TextView
+        style="@style/myTextView"
+        android:text="2.bindToLifecycle()使用"
+        android:layout_margin="15dp"/>
+
+    <Button
+        android:id="@+id/btn2"
+        style="@style/myButton"
+        android:text="发起请求"
+        android:layout_marginLeft="15dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_desc2"
+        style="@style/myTextView"
+        android:text="回调结果："
+        android:layout_margin="15dp"/>
+
+
+    <Button
+        android:id="@+id/btn3"
+        style="@style/myButton"
+        android:text="进入下一页面"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

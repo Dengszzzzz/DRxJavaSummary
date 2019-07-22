@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sz.dzh.drxjavasummary">
+
+    <application
+        android:allowBackup="true"
+        android:name=".base.App"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".module.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".module.rxStudy.RxJStudyListActivity" />
+        <activity android:name=".module.rxStudy.FlowableActivity" />
+        <activity android:name=".module.rxStudy.RxCombineActivity" />
+        <activity android:name=".module.rxStudy.RxConditionActivity" />
+        <activity android:name=".module.rxStudy.RxCreateActivity" />
+        <activity android:name=".module.rxStudy.RxFilterActivity" />
+        <activity android:name=".module.rxStudy.RxFunctionActivity" />
+        <activity android:name=".module.rxStudy.RxTransformActivity" />
+        <activity android:name=".module.rxUse.RxBusActvitiy" />
+        <activity android:name=".module.rxUse.RxBusBActvitiy" />
+        <activity android:name=".module.rxUse.RxUseListActivity" />
+        <activity android:name=".module.rxUse.RxCodeActvitiy" />
+        <activity android:name=".module.rxUse.RxLifecycleActivity" />
+    </application>
+
+</manifest>

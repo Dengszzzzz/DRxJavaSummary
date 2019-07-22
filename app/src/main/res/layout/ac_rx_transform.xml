@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+    <TextView
+        style="@style/myTextView"
+        android:text="转化类操作符"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_map"
+                style="@style/myButton"
+                android:text="map"/>
+
+            <Button
+                android:id="@+id/btn_flatMap"
+                style="@style/myButton"
+                android:text="flatMap"/>
+            <Button
+                android:id="@+id/btn_concatMap"
+                style="@style/myButton"
+                android:text="concatMap"/>
+            <Button
+                android:id="@+id/btn_buffer"
+                style="@style/myButton"
+                android:text="buffer"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/myTextView"
+            android:layout_marginTop="15dp"
+            android:text="compose 和 Transformers："/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_compose"
+            style="@style/myButton"
+            android:text="compose"/>
+
+            <TextView
+                android:id="@+id/tv_compose"
+                style="@style/myTextView"
+                android:layout_marginLeft="15dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

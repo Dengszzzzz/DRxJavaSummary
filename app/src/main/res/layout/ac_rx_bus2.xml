@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        style="@style/myTextView"
+        android:layout_margin="15dp"
+        android:text="点击按钮发送RxBus事件到A页面"/>
+
+    <Button
+        android:id="@+id/btn_send"
+        style="@style/myButton"
+        android:layout_marginLeft="15dp"
+        android:text="发送String.class事件"/>
+
+    <Button
+        android:id="@+id/btn_send2"
+        style="@style/myButton"
+        android:layout_marginLeft="15dp"
+        android:text="发送RxEvent事件，且code为404"/>
+
+    <Button
+        android:id="@+id/btn_send3"
+        style="@style/myButton"
+        android:layout_marginLeft="15dp"
+        android:text="发送RxEvent事件，且code为100"/>
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+
+        <TextView
+            style="@style/myTextView"
+            android:text="各个事件操作符:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_do"
+                style="@style/myButton"
+                android:text="do"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/myTextView"
+            android:layout_marginTop="15dp"
+            android:text="重试:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_retry"
+                style="@style/myButton"
+                android:text="retry"/>
+
+            <Button
+                android:id="@+id/btn_retryUntil"
+                style="@style/myButton"
+                android:text="retryUntil"/>
+            <Button
+                android:id="@+id/btn_retryWhen"
+                style="@style/myButton"
+                android:text="retryWhen"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/myTextView"
+            android:layout_marginTop="15dp"
+            android:text="重复发送:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_repeat"
+                style="@style/myButton"
+                android:text="repeat"/>
+
+            <Button
+                android:id="@+id/btn_repeatWhen"
+                style="@style/myButton"
+                android:text="repeatWhen"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

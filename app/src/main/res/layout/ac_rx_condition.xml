@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <Button
+            android:id="@+id/btn_all"
+            style="@style/myButton"
+            android:text="all"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_takeWhile"
+                style="@style/myButton"
+                android:text="takeWhile"/>
+
+            <Button
+                android:id="@+id/btn_skipWhile"
+                style="@style/myButton"
+                android:text="skipWhile"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_takeUntil"
+                style="@style/myButton"
+                android:text="takeUntil"/>
+
+            <Button
+                android:id="@+id/btn_skipUntil"
+                style="@style/myButton"
+                android:text="skipUntil"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_sequenceEqual"
+                style="@style/myButton"
+                android:text="sequenceEqual"/>
+
+            <Button
+                android:id="@+id/btn_contains"
+                style="@style/myButton"
+                android:text="contains"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_amb"
+            style="@style/myButton"
+            android:text="amb"/>
+
+        <Button
+            android:id="@+id/btn_defaultEmpty"
+            style="@style/myButton"
+            android:text="defaultEmpty"/>
+
+    </LinearLayout>
+
+</LinearLayout>

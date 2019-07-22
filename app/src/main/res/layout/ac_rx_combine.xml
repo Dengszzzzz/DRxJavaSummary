@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+    <TextView
+        style="@style/myTextView"
+        android:text="组合多个被观察者"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_concat"
+                style="@style/myButton"
+                android:text="concat"/>
+
+            <Button
+                android:id="@+id/btn_merge"
+                style="@style/myButton"
+                android:text="merge"/>
+            <Button
+                android:id="@+id/btn_concatDelayError"
+                style="@style/myButton"
+                android:text="concatDelayError"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/myTextView"
+            android:layout_marginTop="15dp"
+            android:text="合并多个事件："/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_zip"
+                style="@style/myButton"
+                android:text="zip"/>
+
+            <Button
+                android:id="@+id/btn_combineLatest"
+                style="@style/myButton"
+                android:text="combineLatest"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_reduce"
+            style="@style/myButton"
+            android:text="reduce"/>
+        <Button
+            android:id="@+id/btn_collect"
+            style="@style/myButton"
+            android:text="collect"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/myTextView"
+            android:layout_marginTop="15dp"
+            android:text="其他："/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_startWith"
+                style="@style/myButton"
+                android:text="startWith"/>
+
+            <Button
+                android:id="@+id/btn_count"
+                style="@style/myButton"
+                android:text="count"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

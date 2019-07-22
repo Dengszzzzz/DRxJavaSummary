@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top_view"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <TextView
+            style="@style/myTextView"
+            android:text="过滤"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_filter"
+                style="@style/myButton"
+                android:text="filter"/>
+
+            <Button
+                android:id="@+id/btn_ofType"
+                style="@style/myButton"
+                android:text="ofType"/>
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/myTextView"
+            android:text="跳过n个事件"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_skip"
+                style="@style/myButton"
+                android:text="skip"/>
+
+            <Button
+                android:id="@+id/btn_skipLast"
+                style="@style/myButton"
+                android:text="skipLast"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/myTextView"
+            android:text="过滤重复事件"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_distinct"
+                style="@style/myButton"
+                android:text="distinct"/>
+
+            <Button
+                android:id="@+id/btn_distinctUntilChanged"
+                style="@style/myButton"
+                android:text="distinctUntilChanged"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/myTextView"
+            android:text="接收n个事件"
+            android:layout_marginTop="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_take"
+                style="@style/myButton"
+                android:text="take"/>
+
+            <Button
+                android:id="@+id/btn_takeLast"
+                style="@style/myButton"
+                android:text="takeLast"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/myTextView"
+            android:text="其他"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/btn_throttleFirst"
+            style="@style/myButton"
+            android:text="throttleFirst"/>
+
+        <Button
+            android:id="@+id/btn_debounce"
+            style="@style/myButton"
+            android:text="debounce"/>
+    </LinearLayout>
+
+</LinearLayout>
