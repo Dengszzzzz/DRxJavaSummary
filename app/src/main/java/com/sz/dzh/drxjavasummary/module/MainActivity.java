@@ -76,6 +76,7 @@ public class MainActivity extends BaseActivity {
     private void initData(){
         addClazzBean("RxJava2 基础知识", RxJStudyListActivity.class);
         addClazzBean("RxJava2 实际应用场景", RxUseListActivity.class);
+        addClazzBean("RxJava2 实际应用场景2", RxUseListActivity.class);
     }
 
     private void initView(){
