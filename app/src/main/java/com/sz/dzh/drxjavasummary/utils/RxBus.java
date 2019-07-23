@@ -31,6 +31,29 @@ import io.reactivex.subjects.Subject;
  *    Subject可以同时代表 Observer 和 Observable，允许从数据源中多次发送结果给多个观察者。
  *
  *
+ * Subject定义：
+ *   Subject 可以同时代表 Observer 和 Observable，允许从数据源中多次发送结果给多个观察者。
+ *
+ * 1、AsyncSubject
+ *    只有当 Subject 调用 onComplete 方法时，才会将 Subject 中的最后一个事件传递给所有的 Observer。
+ *
+ * 2.BehaviorSubject
+ *    当观察者订阅BehaviorSubject时，它开始发射原始Observable最近发射的数据（如果此时还没有收到任何数据，
+ *    它会发射一个默认值），然后继续发射其它任何来自原始Observable的数据。然而，如果原始的Observable因为
+ *    发生了一个错误而终止，BehaviorSubject将不会发射任何数据，只是简单的向前传递这个错误通知。
+ *    Rxlifecycle2（RxJava绑定声明周期的库）中用到。
+ *
+ * 3.PublishSubject
+ *    不会改变事件的发送顺序；在已经发送了一部分事件之后注册的 Observer 不会收到之前发送的事件。
+ *
+ * 4.ReplaySubject
+ *    无论什么时候注册 Observer 都可以接收到任何时候通过该 Observable 发射的事件。
+ *
+ * 5.UnicastSubject
+ *   只允许一个 Observer 进行监听，在该 Observer 注册之前会将发射的所有的事件放进一个队列中，
+ *   并在 Observer 注册的时候一起通知给它。
+ *
+ *
  * 源码来自：
  * https://www.jianshu.com/p/3a3462535b4d
  */
@@ -49,7 +72,7 @@ public class RxBus {
      * 那么只需在mSubscriptionMap里找到key为XXActivity的Value（CompositeDisposable），再取出Disposable
      * 取消订阅即可。
      *
-     * 如果不用的话，就要为每一个Activity写一个容器去保存它的订阅的事件了，相当麻烦。
+     * 如果不用的话，就要为每一个Activity写一个容器去保存它的订阅的事件了。
      * */
     private HashMap<String, CompositeDisposable> mSubscriptionMap;
     private static volatile RxBus mRxBus;
@@ -66,30 +89,6 @@ public class RxBus {
         return mRxBus;
     }
 
-
-    /**
-     * Subject定义：
-     *   Subject 可以同时代表 Observer 和 Observable，允许从数据源中多次发送结果给多个观察者。
-     *
-     * 1、AsyncSubject
-     *    只有当 Subject 调用 onComplete 方法时，才会将 Subject 中的最后一个事件传递给所有的 Observer。
-     *
-     * 2.BehaviorSubject
-     *    当观察者订阅BehaviorSubject时，它开始发射原始Observable最近发射的数据（如果此时还没有收到任何数据，
-     *    它会发射一个默认值），然后继续发射其它任何来自原始Observable的数据。然而，如果原始的Observable因为
-     *    发生了一个错误而终止，BehaviorSubject将不会发射任何数据，只是简单的向前传递这个错误通知。
-     *    Rxlifecycle2（RxJava绑定声明周期的库）中用到。
-     *
-     * 3.PublishSubject
-     *    不会改变事件的发送顺序；在已经发送了一部分事件之后注册的 Observer 不会收到之前发送的事件。
-     *
-     * 4.ReplaySubject
-     *    无论什么时候注册 Observer 都可以接收到任何时候通过该 Observable 发射的事件。
-     *
-     * 5.UnicastSubject
-     *   只允许一个 Observer 进行监听，在该 Observer 注册之前会将发射的所有的事件放进一个队列中，
-     *   并在 Observer 注册的时候一起通知给它。
-     * */
 
     /**
      * 正常订阅可用PublishSubject、黏性事件可用ReplaySubject。

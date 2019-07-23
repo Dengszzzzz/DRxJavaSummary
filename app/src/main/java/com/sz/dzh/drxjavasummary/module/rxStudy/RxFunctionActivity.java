@@ -35,7 +35,7 @@ import io.reactivex.schedulers.Schedulers;
  * 2.delay（）       使得被观察者延迟一段时间再发送事件
  * 3.do()            各个事件操作符
  * 4.retry()         重试，即当出现错误时，让被观察者（Observable）重新发射数据
- * retryUntil（）     Observable遇到错误时，是否让Observable重新订阅
+ * retryUntil（）     Observable遇到错误时，在retryUntil()的方法里决定，是否让Observable重新订阅
  * retryWhen（）       retryWhen将onError中的Throwable传递给一个函数，这个函数产生另一个Observable，由这个Observable来决定是否要重新订阅原Observable。
  * 5.repeat（）                  无条件地、重复发送 被观察者事件
  * repeatWhen（Integer int）   传入参数 = 重复发送次数有限
